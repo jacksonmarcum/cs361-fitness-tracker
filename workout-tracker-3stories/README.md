@@ -5,8 +5,3 @@ Implements the first 3 required user stories:
 1. **Login** – Access the app.
 2. **Log Workout** – Record exercise, sets, reps (+ optional metric/date/notes).
 3. **Workout History** – View list, search, view details (modal), delete (with confirm).
-
-## Run
-- Unzip these files
-- Open `index.html` in a browser (no server needed)
-- Data is stored in localStorage
