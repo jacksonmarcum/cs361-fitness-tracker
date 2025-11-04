@@ -1,0 +1,15 @@
+body{font-family:sans-serif;background:#fafafa;margin:0}
+header{background:#1f6feb;color:white;padding:10px}
+h1{margin:0}nav button{margin:5px}
+main{padding:20px;max-width:800px;margin:auto}
+.hidden{display:none}
+.card{background:white;padding:15px;border-radius:8px;margin-top:10px}
+input,textarea,button{font:inherit;margin-top:5px}
+input,textarea{width:100%;padding:8px}
+button{padding:8px 12px;border-radius:6px;border:1px solid #ccc;cursor:pointer}
+button.primary{background:#1f6feb;color:white;border-color:#1f6feb}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.actions{display:flex;gap:10px;justify-content:flex-end}
+.error{color:red}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:10px 16px;border-radius:20px}

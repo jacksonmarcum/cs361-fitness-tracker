@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Workout Tracker - 3 User Stories</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Workout Tracker</h1>
+    <nav id="topnav" class="hidden">
+      <button data-target="dashboard">Home</button>
+      <button data-target="log">Log Workout</button>
+      <button data-target="history">History</button>
+      <button id="logoutBtn">Logout</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="login" class="view">
+      <h2>Login</h2>
+      <p class="hint"><strong>Why log workouts?</strong> Tracking progress keeps you motivated and consistent.</p>
+      <form id="loginForm" class="card">
+        <label>Username<input id="username" required></label>
+        <label>Password<input type="password" id="password" required></label>
+        <button type="submit" class="primary">Login</button>
+      </form>
+    </section>
+
+    <section id="dashboard" class="view hidden">
+      <h2>Dashboard</h2>
+      <p>Welcome, <span id="welcomeName"></span>!</p>
+      <div class="grid">
+        <button class="tile" data-target="log">Log Workout</button>
+        <button class="tile" data-target="history">View History</button>
+      </div>
+    </section>
+
+    <section id="log" class="view hidden">
+      <h2>Log Workout</h2>
+      <form id="logForm" class="card">
+        <label>Exercise<input id="ex" required placeholder="e.g., Bench Press"></label>
+        <div class="two">
+          <label>Sets<input id="sets" type="number" min="1" required></label>
+          <label>Reps<input id="reps" type="number" min="1" required></label>
+        </div>
+        <label>Weight / Duration<input id="metric" placeholder="e.g., 120 lb or 30 min"></label>
+        <label>Date<input id="date" type="date"></label>
+        <label>Notes<textarea id="notes" rows="3"></textarea></label>
+        <div class="actions">
+          <button type="submit" class="primary">Save</button>
+          <button type="button" id="cancelLog">Cancel</button>
+        </div>
+        <p id="formError" class="error hidden"></p>
+      </form>
+    </section>
+
+    <section id="history" class="view hidden">
+      <h2>Workout History</h2>
+      <div class="card">
+        <input id="search" placeholder="Search workouts...">
+        <table id="historyTable">
+          <thead><tr><th>Date</th><th>Workout</th><th>Actions</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <dialog id="viewDialog" class="card">
+        <h3>Workout Details</h3>
+        <pre id="detailText"></pre>
+        <div class="actions"><button id="closeView">Close</button></div>
+      </dialog>
+    </section>
+  </main>
+
+  <div id="toast" class="toast hidden">Saved</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
